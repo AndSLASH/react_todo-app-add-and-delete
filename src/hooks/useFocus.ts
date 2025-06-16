@@ -6,10 +6,8 @@ export const useFocus = () => {
 
   useEffect(() => {
     if (shouldFocus && inputRef.current) {
-      setTimeout(() => {
-        inputRef.current?.focus();
-        setShouldFocus(false);
-      }, 50);
+      inputRef.current?.focus();
+      setShouldFocus(false);
     }
   }, [shouldFocus]);
 
